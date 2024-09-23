@@ -1,0 +1,27 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+ directory = "netlify/functions"
+[functions."*"]
+
+[build]
+publish = "build"
+publishOrigin = "ui"
+commandOrigin = "ui"
+command = "npm run build"
+
+[build.environment]
+REACT_APP_API_URL = "https://newsapi.org/v2/everything?q=nellore&apiKey=3d37246c11894191b62fe0f5c2f80ad3"
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
