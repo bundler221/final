@@ -2,6 +2,7 @@
   "name": "nelnew",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://newsapi.org/v2/everything?q=nellore&apiKey=3d37246c11894191b62fe0f5c2f80ad3",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
