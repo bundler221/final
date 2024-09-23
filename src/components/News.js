@@ -5,14 +5,14 @@ import axios from 'axios';
 export default class News extends Component {
   state = {
     articles: [],
-    loading: true, // Set to true initially while loading
+    loading: true,
     currentPage: 1,
     articlesPerPage: 6,
   };
 
   async componentDidMount() {
     try {
-      const response = await axios.get("https://newsapi.org/v2/everything?q=nellore&apiKey=3d37246c11894191b62fe0f5c2f80ad3";
+      const response = await axios.get("https://newsapi.org/v2/everything?q=nellore&apiKey=3d37246c11894191b62fe0f5c2f80ad3");
       this.setState({ articles: response.data.articles, loading: false });
     } catch (error) {
       console.error("Error fetching articles:", error);
