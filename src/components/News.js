@@ -5,32 +5,19 @@ import axios from 'axios';
 export default class News extends Component {
   state = {
     articles: [],
-<<<<<<< HEAD
     loading: true, // Set loading to true initially
-=======
-    loading: true,
->>>>>>> 870ef1b2416647050e9f9696840e2e9a3f5206f9
     currentPage: 1,
     articlesPerPage: 6,
   };
 
   async componentDidMount() {
     try {
-<<<<<<< HEAD
       const response = await axios.get("http://localhost:5000/api/news"); // Fetch from the proxy server
       this.setState({ articles: response.data.articles, loading: false });
     } catch (error) {
       console.error("Error fetching articles:", error.response ? error.response.data : error.message);
       this.setState({ loading: false });
     }
-=======
-    const response = await axios.get("https://newsapi.org/v2/everything?q=nellore&apiKey=3d37246c11894191b62fe0f5c2f80ad3");
-    this.setState({ articles: response.data.articles, loading: false });
-} catch (error) {
-    console.error("Error fetching articles:", error.response ? error.response.data : error.message);
-    this.setState({ loading: false });
-}
->>>>>>> 870ef1b2416647050e9f9696840e2e9a3f5206f9
   }
 
   handlePageChange = (pageNumber) => {
