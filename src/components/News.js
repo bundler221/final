@@ -11,7 +11,7 @@ export default class News extends Component {
   };
 
   async componentDidMount() {
-    const url = `https://newsapi.org/v2/everything?q=nellore&apiKey=3d37246c11894191b62fe0f5c2f80ad3`; // Replace with your API key
+    const url = `https://newsapi.org/v2/everything?q=Nellore&apiKey=3d37246c11894191b62fe0f5c2f80ad3`; // Replace with your API key
     const response = await axios.get(url);
     this.setState({ articles: response.data.articles, loading: false });
   }
